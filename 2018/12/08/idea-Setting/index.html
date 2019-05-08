@@ -105,7 +105,7 @@
 <meta property="og:description" content="记录自己idea的个性化设置。记得定期将自己的setting导出，新环境直接导入就好了。file-&amp;gt;export setting 插件安装热部署jRebelhttps://blog.csdn.net/xingbaozhen1210/article/details/81093041 Mybatis Plugin1.提供Mapper接口与配置文件中对应SQL的导航2.编辑XML文件时自动补全..">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ayanamiq.github.io/2018/12/08/idea-Setting/1.png">
-<meta property="og:updated_time" content="2019-05-05T07:18:50.112Z">
+<meta property="og:updated_time" content="2019-05-08T09:46:34.963Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="idea-Setting">
 <meta name="twitter:description" content="记录自己idea的个性化设置。记得定期将自己的setting导出，新环境直接导入就好了。file-&amp;gt;export setting 插件安装热部署jRebelhttps://blog.csdn.net/xingbaozhen1210/article/details/81093041 Mybatis Plugin1.提供Mapper接口与配置文件中对应SQL的导航2.编辑XML文件时自动补全..">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-05 15:18:50" itemprop="dateModified" datetime="2019-05-05T15:18:50+08:00">2019-05-05</time>
+                <time title="修改时间：2019-05-08 17:46:34" itemprop="dateModified" datetime="2019-05-08T17:46:34+08:00">2019-05-08</time>
               
             
           </span>
@@ -528,7 +528,9 @@
 <li>如果想不是每次推送都输入账号密码，可以添加SSH公钥，参考：<a href="https://coding.net/help/doc/git/ssh-key.html" target="_blank" rel="noopener">https://coding.net/help/doc/git/ssh-key.html</a></li>
 </ul>
 <h1 id="无需插件生成serialVersionUID"><a href="#无需插件生成serialVersionUID" class="headerlink" title="无需插件生成serialVersionUID"></a>无需插件生成serialVersionUID</h1><p>默认情况下Intellij IDEA不会提示继承了Serializable接口的类生成serialVersionUID的警告。如果需要生成serialVersionUID，就要在Preferences里面进行设置。<br><code>Preferences -&gt; Inspections -&gt; Serialization issues -&gt; Serialization class without &#39;serialVersionUID</code><br>打上勾，这时候，在javabean里面，就可以看到编辑器右边有黄色的提示了，可以点开看看，将光标放到类名上，按atl＋enter键，就会提示生成serialVersionUID了。</p>
-<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>WenQuanYi Micro Hei Mono</p>
+<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><h2 id="修改菜单字体"><a href="#修改菜单字体" class="headerlink" title="修改菜单字体"></a>修改菜单字体</h2><p><code>settings-&gt;Appearence &amp; Behavior-&gt;Appearence</code>，右侧找到<code>Use custom font</code>，修改右侧的字体和字号。</p>
+<h2 id="修改java字体"><a href="#修改java字体" class="headerlink" title="修改java字体"></a>修改java字体</h2><p><code>settings-&gt;Color Scheme-&gt;Color Scheme font</code>，修改右侧的字体。</p>
+<p>WenQuanYi Micro Hei Mono</p>
 <h1 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h1><p>git忽略的原理： git设置本地忽略必须保证git的远程仓库分支上没有这个要忽略的文件，如果远程分支上存在这个文件，本地在设置ignore将不起作用。<br>所以一般是在.gitignore 文件里面加入 .idea/ workspace.xml 即可<br>但是如果你这样做之前已经将此文件提交到了git远程仓库，那就需要执行以下命令了：<br><code>git rm -r --cached .idea</code></p>
 
       
@@ -647,7 +649,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">91</span>
+                    <span class="site-state-item-count">98</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -665,8 +667,6 @@
                     
                   
                     
-                    
-                      
                     
                       
                     
@@ -776,7 +776,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插件安装"><span class="nav-number">1.</span> <span class="nav-text">插件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#热部署jRebel"><span class="nav-number">1.1.</span> <span class="nav-text">热部署jRebel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis-Plugin"><span class="nav-number">1.2.</span> <span class="nav-text">Mybatis Plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彩色进度条"><span class="nav-number">1.3.</span> <span class="nav-text">彩色进度条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装mybatis-generator-自动生成三件套"><span class="nav-number">1.4.</span> <span class="nav-text">安装mybatis-generator(自动生成三件套)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释模板"><span class="nav-number">2.</span> <span class="nav-text">注释模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窗口开多后自动关闭"><span class="nav-number">3.</span> <span class="nav-text">窗口开多后自动关闭</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#idea输入法不跟随"><span class="nav-number">4.</span> <span class="nav-text">idea输入法不跟随</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉重复代码检查"><span class="nav-number">5.</span> <span class="nav-text">去掉重复代码检查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉Mybatis-xml文件的浅黄背景色"><span class="nav-number">6.</span> <span class="nav-text">去掉Mybatis-xml文件的浅黄背景色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从Coding拉取代码"><span class="nav-number">7.</span> <span class="nav-text">从Coding拉取代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将项目上传到Coding"><span class="nav-number">8.</span> <span class="nav-text">将项目上传到Coding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将Idea中的项目上传"><span class="nav-number">8.1.</span> <span class="nav-text">将Idea中的项目上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过命令行上传"><span class="nav-number">8.2.</span> <span class="nav-text">通过命令行上传</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无需插件生成serialVersionUID"><span class="nav-number">9.</span> <span class="nav-text">无需插件生成serialVersionUID</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体"><span class="nav-number">10.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gitignore"><span class="nav-number">11.</span> <span class="nav-text">.gitignore</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插件安装"><span class="nav-number">1.</span> <span class="nav-text">插件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#热部署jRebel"><span class="nav-number">1.1.</span> <span class="nav-text">热部署jRebel</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis-Plugin"><span class="nav-number">1.2.</span> <span class="nav-text">Mybatis Plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彩色进度条"><span class="nav-number">1.3.</span> <span class="nav-text">彩色进度条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装mybatis-generator-自动生成三件套"><span class="nav-number">1.4.</span> <span class="nav-text">安装mybatis-generator(自动生成三件套)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释模板"><span class="nav-number">2.</span> <span class="nav-text">注释模板</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#窗口开多后自动关闭"><span class="nav-number">3.</span> <span class="nav-text">窗口开多后自动关闭</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#idea输入法不跟随"><span class="nav-number">4.</span> <span class="nav-text">idea输入法不跟随</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉重复代码检查"><span class="nav-number">5.</span> <span class="nav-text">去掉重复代码检查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#去掉Mybatis-xml文件的浅黄背景色"><span class="nav-number">6.</span> <span class="nav-text">去掉Mybatis-xml文件的浅黄背景色</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从Coding拉取代码"><span class="nav-number">7.</span> <span class="nav-text">从Coding拉取代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#将项目上传到Coding"><span class="nav-number">8.</span> <span class="nav-text">将项目上传到Coding</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#将Idea中的项目上传"><span class="nav-number">8.1.</span> <span class="nav-text">将Idea中的项目上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过命令行上传"><span class="nav-number">8.2.</span> <span class="nav-text">通过命令行上传</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#无需插件生成serialVersionUID"><span class="nav-number">9.</span> <span class="nav-text">无需插件生成serialVersionUID</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体"><span class="nav-number">10.</span> <span class="nav-text">字体</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改菜单字体"><span class="nav-number">10.1.</span> <span class="nav-text">修改菜单字体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改java字体"><span class="nav-number">10.2.</span> <span class="nav-text">修改java字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gitignore"><span class="nav-number">11.</span> <span class="nav-text">.gitignore</span></a></li></ol></div>
             
 
           </div>
