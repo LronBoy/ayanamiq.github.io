@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="王靖尧的博客">
 <meta property="og:description" content="增删改查12345插入(增)：insert into 表名字(列名1，列名2...) values(值1，值2...)或者：insert into 表名字 values(值1，值2...)若不指定列名，则需要插入全部字段。 123删除：delete from 表名字 where id = 1若不加where条件，则删除数据表中所有数据 123修改：update 表名字 set 列1=值1，列2=值">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-05T07:18:50.142Z">
+<meta property="og:updated_time" content="2019-05-09T02:45:19.702Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql基础">
 <meta name="twitter:description" content="增删改查12345插入(增)：insert into 表名字(列名1，列名2...) values(值1，值2...)或者：insert into 表名字 values(值1，值2...)若不指定列名，则需要插入全部字段。 123删除：delete from 表名字 where id = 1若不加where条件，则删除数据表中所有数据 123修改：update 表名字 set 列1=值1，列2=值">
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-05 15:18:50" itemprop="dateModified" datetime="2019-05-05T15:18:50+08:00">2019-05-05</time>
+                <time title="修改时间：2019-05-09 10:45:19" itemprop="dateModified" datetime="2019-05-09T10:45:19+08:00">2019-05-09</time>
               
             
           </span>
@@ -499,7 +499,7 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE &lt;表名&gt;</span><br><span class="line">[ALTER COLUMN &lt;列名&gt; &lt;新数据类型&gt;]</span><br><span class="line">|[ADD &lt;列名&gt; &lt;数据类型&gt; [属性]</span><br><span class="line">|[DROP COLUMN &lt;列名&gt;]</span><br><span class="line">|[ADD [constraint] [约束名] 约束定义</span><br><span class="line">|[DROP [constraint] 约束名]</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>新增字段<br><code>alter table table_name add column_name varchar(200) not null default 0;</code></p>
+<li><p>新增字段<br><code>alter table table_name add column_name varchar(200) not null default 0 COMMENT &quot;描述&quot;;</code></p>
 </li>
 <li><p>修改字段<br><code>ALTER TABLE table_name MODIFY column_name VARCHAR(200) NULL DEFAULT null COMMENT &#39;这是字段描述&#39;;</code></p>
 </li>
@@ -721,7 +721,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">98</span>
+                    <span class="site-state-item-count">99</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
