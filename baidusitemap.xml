@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ayanamiq.github.io/2019/03/28/multithreading-JUC%E9%94%81/</loc>
+    <lastmod>2019-05-17</lastmod>
+  </url>  <url>
+    <loc>http://ayanamiq.github.io/2018/12/24/pay/</loc>
+    <lastmod>2019-05-17</lastmod>
+  </url>  <url>
+    <loc>http://ayanamiq.github.io/2018/12/16/ArrayList/</loc>
+    <lastmod>2019-05-17</lastmod>
+  </url>  <url>
+    <loc>http://ayanamiq.github.io/2018/12/06/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2019-05-17</lastmod>
+  </url>  <url>
+    <loc>http://ayanamiq.github.io/2019/05/09/Manage-System/</loc>
+    <lastmod>2019-05-17</lastmod>
+  </url>  <url>
+    <loc>http://ayanamiq.github.io/2019/03/27/mybatis/</loc>
+    <lastmod>2019-05-16</lastmod>
+  </url>  <url>
     <loc>http://ayanamiq.github.io/2018/12/06/mysql%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2019-05-13</lastmod>
   </url>  <url>
-    <loc>http://ayanamiq.github.io/2019/03/27/mybatis/</loc>
-    <lastmod>2019-05-13</lastmod>
-  </url>  <url>
-    <loc>http://ayanamiq.github.io/2019/05/09/Manage-System/</loc>
-    <lastmod>2019-05-09</lastmod>
-  </url>  <url>
     <loc>http://ayanamiq.github.io/2018/12/08/idea-Setting/</loc>
-    <lastmod>2019-05-08</lastmod>
-  </url>  <url>
-    <loc>http://ayanamiq.github.io/2019/03/28/multithreading-JUC%E9%94%81/</loc>
     <lastmod>2019-05-08</lastmod>
   </url>  <url>
     <loc>http://ayanamiq.github.io/2019/03/28/multithreading-JUC%E5%8E%9F%E5%AD%90%E7%B1%BB/</loc>
@@ -97,9 +106,6 @@
     <loc>http://ayanamiq.github.io/2019/01/09/%E6%A0%91/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
-    <loc>http://ayanamiq.github.io/2018/12/06/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2019-05-05</lastmod>
-  </url>  <url>
     <loc>http://ayanamiq.github.io/2018/12/09/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E6%9C%8D%E5%8A%A1%E5%99%A8Jenkins%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
@@ -134,9 +140,6 @@
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>http://ayanamiq.github.io/2018/12/06/redis%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2019-05-05</lastmod>
-  </url>  <url>
-    <loc>http://ayanamiq.github.io/2018/12/24/pay/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>http://ayanamiq.github.io/2018/12/26/mysql%E9%AB%98%E7%BA%A7/</loc>
@@ -190,10 +193,10 @@
     <loc>http://ayanamiq.github.io/2019/03/27/linux/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
-    <loc>http://ayanamiq.github.io/2019/03/07/kafka/</loc>
+    <loc>http://ayanamiq.github.io/2018/12/06/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
-    <loc>http://ayanamiq.github.io/2018/12/06/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <loc>http://ayanamiq.github.io/2019/03/07/kafka/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>http://ayanamiq.github.io/2019/04/30/hashCode-and-equals/</loc>
@@ -290,9 +293,6 @@
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>http://ayanamiq.github.io/2018/12/06/Collection/</loc>
-    <lastmod>2019-05-05</lastmod>
-  </url>  <url>
-    <loc>http://ayanamiq.github.io/2018/12/16/ArrayList/</loc>
     <lastmod>2019-05-05</lastmod>
   </url>  <url>
     <loc>http://ayanamiq.github.io/2019/04/03/API-notice/</loc>
