@@ -96,19 +96,19 @@
 
 
 
-  <meta name="description" content="软件安装mysql###  技巧apache下载文件  找到apache的安装目录，httpd目录 进入到conf.d目录下 删掉welcome.confrm –rf welcome.conf 回到apache的安装目录下，进入到conf 文件夹下 查看httpd.conf文件(里面有默认访问页面的路径)vi httpd.conf找到这个：DocumentRoot &amp;quot;/var/www/h">
+  <meta name="description" content="软件安装mysql###  tomcat官网下载：https://tomcat.apache.org/download-90.cgi找到Core下的tar.gz包下载并上传到/usr/local 目录下。 到usr/local目录下解压：tar -zxvf apache-tomcat-9.0.1.tar.gz tomcat默认端口是8080，这里为了防止和其他任务端口冲突，我们将端口修改为合适的端">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux">
 <meta property="og:url" content="http://ayanamiq.github.io/2019/03/27/linux/index.html">
 <meta property="og:site_name" content="王靖尧的博客">
-<meta property="og:description" content="软件安装mysql###  技巧apache下载文件  找到apache的安装目录，httpd目录 进入到conf.d目录下 删掉welcome.confrm –rf welcome.conf 回到apache的安装目录下，进入到conf 文件夹下 查看httpd.conf文件(里面有默认访问页面的路径)vi httpd.conf找到这个：DocumentRoot &amp;quot;/var/www/h">
+<meta property="og:description" content="软件安装mysql###  tomcat官网下载：https://tomcat.apache.org/download-90.cgi找到Core下的tar.gz包下载并上传到/usr/local 目录下。 到usr/local目录下解压：tar -zxvf apache-tomcat-9.0.1.tar.gz tomcat默认端口是8080，这里为了防止和其他任务端口冲突，我们将端口修改为合适的端">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ayanamiq.github.io/2019/03/27/linux/1.png">
-<meta property="og:updated_time" content="2019-05-05T07:18:50.117Z">
+<meta property="og:updated_time" content="2019-05-20T09:59:28.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux">
-<meta name="twitter:description" content="软件安装mysql###  技巧apache下载文件  找到apache的安装目录，httpd目录 进入到conf.d目录下 删掉welcome.confrm –rf welcome.conf 回到apache的安装目录下，进入到conf 文件夹下 查看httpd.conf文件(里面有默认访问页面的路径)vi httpd.conf找到这个：DocumentRoot &amp;quot;/var/www/h">
+<meta name="twitter:description" content="软件安装mysql###  tomcat官网下载：https://tomcat.apache.org/download-90.cgi找到Core下的tar.gz包下载并上传到/usr/local 目录下。 到usr/local目录下解压：tar -zxvf apache-tomcat-9.0.1.tar.gz tomcat默认端口是8080，这里为了防止和其他任务端口冲突，我们将端口修改为合适的端">
 <meta name="twitter:image" content="http://ayanamiq.github.io/2019/03/27/linux/1.png">
 
 
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-05 15:18:50" itemprop="dateModified" datetime="2019-05-05T15:18:50+08:00">2019-05-05</time>
+                <time title="修改时间：2019-05-20 17:59:28" itemprop="dateModified" datetime="2019-05-20T17:59:28+08:00">2019-05-20</time>
               
             
           </span>
@@ -474,6 +474,28 @@
 
       
         <h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><p>### </p>
+<h2 id="tomcat"><a href="#tomcat" class="headerlink" title="tomcat"></a>tomcat</h2><p>官网下载：<br><a href="https://tomcat.apache.org/download-90.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-90.cgi</a><br>找到Core下的tar.gz包下载并上传到/usr/local 目录下。</p>
+<p>到usr/local目录下解压：<br><code>tar -zxvf apache-tomcat-9.0.1.tar.gz</code></p>
+<p>tomcat默认端口是8080，这里为了防止和其他任务端口冲突，我们将端口修改为合适的端口。<br>cd到/tomcat/conf，<code>vi server.xml</code>，找到<code>Connector port=&quot;8080&quot;</code>的位置，修改为恰当的端口。</p>
+<p>cd到tomcat的bin目录下：<br><code>cd ../bin</code>，启动tomcat<code>./startup.sh</code>，看到日志末尾<code>Tomcat started</code>，说明tomcat启动成功。</p>
+<p>查看tomcat日志：<br><code>tail -f logs/catalina.out</code></p>
+<p>若远程无法访问，可能需要在阿里云控制台添加端口白名单。或者是防火墙</p>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>先确认是否安装了git：<br><code>rpm -qa|grep git</code><br>如果安装了需要先卸载：<br><code>rpm -e --nodeps git  或者  rpm -e git</code></p>
+<p>安装：<br><code>yum install git</code><br>再使用 rpm -qa|grep git 来查看是否已经安装好了Git。</p>
+<h2 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h2><ol>
+<li><p>到指定目录下载maven：<br><code>wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz</code></p>
+</li>
+<li><p>解压：<br><code>tar -zxvf apache-maven-3.3.9-bin.tar.gz</code></p>
+</li>
+<li><p>改下名，方便后面操作：<br><code>mv apache-maven-3.3.9 maven</code></p>
+</li>
+<li><p>配置环境变量<br><code>vi /etc/profile</code>，在合适的位置添加如下内容：<br><code>M2_HOME=/opt/tyrone/maven （需要修改为自己maven的安装路径）</code><br><code>export PATH=${M2_HOME}/bin:${PATH}</code></p>
+</li>
+</ol>
+<p>然后使配置文件生效：<br><code>source /etc/profile</code></p>
+<ol start="5">
+<li>检查是否安装成功<br><code>mvn -v</code><br>出现版本号：<code>Apache Maven 3.3.9...</code>，证明安装成功。</li>
+</ol>
 <h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="apache下载文件"><a href="#apache下载文件" class="headerlink" title="apache下载文件"></a>apache下载文件</h2><p><img src="/2019/03/27/linux/1.png" alt=""></p>
 <ol>
 <li>找到apache的安装目录，httpd目录</li>
@@ -728,7 +750,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#软件安装"><span class="nav-number">1.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql"><span class="nav-number">1.1.</span> <span class="nav-text">mysql</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧"><span class="nav-number">2.</span> <span class="nav-text">技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#apache下载文件"><span class="nav-number">2.1.</span> <span class="nav-text">apache下载文件</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#软件安装"><span class="nav-number">1.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql"><span class="nav-number">1.1.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tomcat"><span class="nav-number">1.2.</span> <span class="nav-text">tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.3.</span> <span class="nav-text">git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maven"><span class="nav-number">1.4.</span> <span class="nav-text">maven</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技巧"><span class="nav-number">2.</span> <span class="nav-text">技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#apache下载文件"><span class="nav-number">2.1.</span> <span class="nav-text">apache下载文件</span></a></li></ol></li></ol></div>
             
 
           </div>

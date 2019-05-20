@@ -105,7 +105,7 @@
 <meta property="og:description" content="文件目录解析 “/“：根目录，linux文件系统入口，是最高级、最重要的目录，衍生出其他目录，还和系统开机、还原、修复有直接关系。一般不要把应用程序直接放在根目录下，如果满了，可能导致无法开机。还需要注意某些程序的日志文件是否在根目录下。 “/bin”：存放的是在单人维护模式下还能够被操作的指令，在/bin底下的指令可以被root与一般帐号所使用，主要有：cat,chmod, chown, dat">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ayanamiq.github.io/2019/03/05/linux基础/1.png">
-<meta property="og:updated_time" content="2019-05-05T07:18:50.120Z">
+<meta property="og:updated_time" content="2019-05-20T08:52:27.178Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux基础">
 <meta name="twitter:description" content="文件目录解析 “/“：根目录，linux文件系统入口，是最高级、最重要的目录，衍生出其他目录，还和系统开机、还原、修复有直接关系。一般不要把应用程序直接放在根目录下，如果满了，可能导致无法开机。还需要注意某些程序的日志文件是否在根目录下。 “/bin”：存放的是在单人维护模式下还能够被操作的指令，在/bin底下的指令可以被root与一般帐号所使用，主要有：cat,chmod, chown, dat">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-05 15:18:50" itemprop="dateModified" datetime="2019-05-05T15:18:50+08:00">2019-05-05</time>
+                <time title="修改时间：2019-05-20 16:52:27" itemprop="dateModified" datetime="2019-05-20T16:52:27+08:00">2019-05-20</time>
               
             
           </span>
@@ -564,7 +564,8 @@ man 2 reboot：查看reboot在第2章里的说明。
 <h3 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h3><p>chown用于改变文件的所有者。<br>命令格式：<br><code>chown [-R] user[：group] file...</code><br>user：新的档案拥有者的使用者ID<br>group：新的档案拥有者的使用者群体(group)<br>-R：对目前目录下的所有档案与子目录进行相同的拥有者变更(即以递归的方式逐个变更)<br>示例：<code>chown root 4.txt</code></p>
 <h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p>cp(copy)命令可以将文件或目录复制到其他目录中。在使用cp命令时，只需要指定源文件名与目标文件名或目标目录即可。命令格式：<code>cp &lt;源&gt; &lt;目标目录&gt;</code><br>例如，把当前目录下的test.txt文件拷贝到/tmp目录下：<code>cp test.txt /tmp</code><br>拷贝目录(命令中需要使用-r选项)：<code>cp -r &lt;源目录名&gt; &lt;目标目录&gt;</code><br>例如，把当前目录下的test目录拷贝到/tmp目录下：<code>cp -r test /tmp</code></p>
 <h3 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h3><p>scp是linux中功能最强大的文件传输命令，可以实现从本地到远程以及远程到本地的文件传输操作。<br>本地到远程的文件复制：<br>文件拷贝命令格式：<br><code>scp local_file remote_username@remote_ip：remote_folder</code><br>或<br><code>scp local_file remote_username@remote_ip：remote_</code><br>file local_file：本地文件。<br>remote_username：远程计算机的用户名。<br>remote_ip：远程计算机的IP 地址。<br>remote_folder：远程计算机的目录。<br>示例：<code>scp 1.mp3 root@192.168.1.2：/tmp/</code><br>目录拷贝命令格式：<br><code>scp -r local_folder remote_username@remote_ip：remote_folder</code><br>例如将本地/home/music/目录复制到远程/tmp/目录下：<br><code>scp -r /home/music/ root@192.168.1.2：/tmp/</code><br>复制后远程有/tmp/music/目录。<br>远程到本地的复制从远程服务器复制文件到本地，只要将两个参数调换顺序即可：<br>拷贝文件：<br>例如把192.168.1.2上的/home/music/1.mp3拷贝到本地/tmp/目录下：<br><code>scp root@192.168.1.2：/home/music/1.mp3 /tmp/</code><br>拷贝目录：<br>例如把192.168.1.2上的/home/music/目录拷贝到本地/tmp/目录下：<br><code>scp -r root@192.168.1.2：/home/music/ /tmp/</code></p>
-<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>mv命令用于移动文件。mv的常见选项包括：<br><code>-i</code>：互动。如果你选择的文件会覆盖目标中的现存文件，它会提示你。这是一个实用的选项，因为它像cp中的-i选项一样，会给你一个确认替换已存文件的机会。<br><code>-f</code>：强制。它会超越互动模式，不提示地移动文件。除非你知道自己在干什么，这个选项很危险。在你对系统信心十足之前，请谨慎使用这个选项。<br><code>-v</code>：详细。显示文件的移动进度。<br>命令格式：<code>mv &lt;源文件&gt; &lt;目标目录&gt;</code><br>如果你想把文件从你的主目录中移到另一个现存的目录中，使用以下命令：<br><code>[root@localhost]# mv sneakers.txt /home/newuser/</code><br>移动后同时给文件改名：<br><code>[root@localhost]# mv sneakers.txt /home/newuser/new_sneakers.txt</code></p>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>mv命令用于移动文件和改名。mv的常见选项包括：<br><code>-i</code>：互动。如果你选择的文件会覆盖目标中的现存文件，它会提示你。这是一个实用的选项，因为它像cp中的-i选项一样，会给你一个确认替换已存文件的机会。<br><code>-f</code>：强制。它会超越互动模式，不提示地移动文件。除非你知道自己在干什么，这个选项很危险。在你对系统信心十足之前，请谨慎使用这个选项。<br><code>-v</code>：详细。显示文件的移动进度。<br>命令格式：<code>mv &lt;源文件&gt; &lt;目标目录&gt;</code><br>如果你想把文件从你的主目录中移到另一个现存的目录中，使用以下命令：<br><code>[root@localhost]# mv sneakers.txt /home/newuser/</code><br>移动后同时给文件改名：<br><code>[root@localhost]# mv sneakers.txt /home/newuser/new_sneakers.txt</code></p>
+<p>把当前文件夹的文件a改为b：<br><code>mv a b</code></p>
 <h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p>mkdir(make directory)命令用来建立目录。例如在系统中当前目录下建立data子目录：<br><code>[root@localhost]# mkdir data</code></p>
 <h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>rm命令用于将文件或目录删除。如果是链接文件，只是删除了该链接，原有文件保持不变。删除文件和目录的选项包括：<br><code>-i</code>：互动。提示你确认删除，这个选项可以帮助你避免误删文件。<br><code>-f</code>：Force，强制。代替互动模式，不提示地删除文件。除非你知道自己在干什么，使用这个选项通常不是明智之举。<br><code>-v</code>：Verbose，显示操作过程的详细信息。显示文件的删除进度。<br><code>-r</code>：Recursive，递归。将会删除某个目录及其中所有的文件和子目录。<br>例如要使用rm命令来删除文件tmp.txt，命令如下：<code>rm tmp.txt</code><br>如果要删除目录，命令如下：<code>rm -r 目录名</code><br>强制删除目录及以下文件：<code>rm -rf 目录名</code></p>
 <h2 id="文件归档和压缩"><a href="#文件归档和压缩" class="headerlink" title="文件归档和压缩"></a>文件归档和压缩</h2><p>需掌握的常用命令：tar，zip，unzip，gzip，gunzip。</p>
@@ -572,6 +573,7 @@ man 2 reboot：查看reboot在第2章里的说明。
 <p>如果现在在/home 这个目录下：<br><code>zip -r data.zip data</code></p>
 <p><code>unzip</code>命令用于解压扩展名为<code>.zip</code>的文件。<br>解压到当前目录：<br><code>unzip data.zip</code></p>
 <p>解压到指定目录：<br><code>unzip data.zip -d /home/wjy/Desktop/</code></p>
+<p>centos需要安装zip和unzip指令：<br><code>yum install -y unzip zip</code></p>
 <h3 id="gzip-gunzip"><a href="#gzip-gunzip" class="headerlink" title="gzip/gunzip"></a>gzip/gunzip</h3><p>gzip命令用于压缩”.gz”文件，gunzip用于解开被gzip压缩过的文件，这些压缩文件预设最后的扩展名为”.gz”。<br>压缩：<code>gzip usr.tar</code><br>解压：<code>gunzip usr.tar.gz</code></p>
 <h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><p>tar命令用于文件打包，不是压缩。<br>打包例子：<code>tar -cvf myfile.tar</code><br>目录解包例子：<code>tar -xvf myfile.tar</code><br>如果一个压缩包是.tar.gz格式，则可以先通过gunzip解压，然后再通过tar解包。也可以通过tar命令直接解压解包，只需在解包加个参数z：<br><code>tar -xzvf myfile.tar.gz</code><br>tar命令常用选项：<br><code>-c</code>：建立新的归档文件<br><code>-x</code>：从归档文件中解出文件<br><code>-v</code>：处理过程中输出相关信息<br><code>-f</code>：指定的文件名<br><code>-z</code>：与-x 联用时调用gzip完成对gz文件的解压</p>
 <h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><p>需掌握的常用命令：free, top, shutdown。</p>
