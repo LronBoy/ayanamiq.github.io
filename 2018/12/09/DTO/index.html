@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="王靖尧的博客">
 <meta property="og:description" content="前言在写接口的时候，如果返回实体类，会返回一些前端并不需要的参数，例如：  学生和班级是一对一，我们会在学生类中，加入班级的实体类，构成一对一关系； 部门和员工是一对多，我们会在部门类中，加入List，list泛型实体类，构成一对多关系。  这样我们其他的接口在用到学生或部门类的时候，就会返回我们不需要的空数据，为null，影响接口效率，整洁程度，还有可能泄露数据库表结构。 简单的DTO使用在使用">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-05T07:18:49.965Z">
+<meta property="og:updated_time" content="2019-05-20T03:37:05.242Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DTO">
 <meta name="twitter:description" content="前言在写接口的时候，如果返回实体类，会返回一些前端并不需要的参数，例如：  学生和班级是一对一，我们会在学生类中，加入班级的实体类，构成一对一关系； 部门和员工是一对多，我们会在部门类中，加入List，list泛型实体类，构成一对多关系。  这样我们其他的接口在用到学生或部门类的时候，就会返回我们不需要的空数据，为null，影响接口效率，整洁程度，还有可能泄露数据库表结构。 简单的DTO使用在使用">
@@ -419,7 +419,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-05 15:18:49" itemprop="dateModified" datetime="2019-05-05T15:18:49+08:00">2019-05-05</time>
+                <time title="修改时间：2019-05-20 11:37:05" itemprop="dateModified" datetime="2019-05-20T11:37:05+08:00">2019-05-20</time>
               
             
           </span>
@@ -492,6 +492,10 @@
 <ul>
 <li>由于内部类中的属性是私有的，所以无法在外部访问。这样，如果我们使用ModelAndView向jsp或freemarker页面返回数据，页面使用诸如el表达式访问数据，会无法获取内部类的属性。所以这种dto，我们只在写接口时使用。</li>
 </ul>
+<h1 id="DTO内部类的问题"><a href="#DTO内部类的问题" class="headerlink" title="DTO内部类的问题"></a>DTO内部类的问题</h1><p>在使用DTO的时候，为了简洁，使用了静态内部类。</p>
+<p>但是由于内部类中的属性是私有的，所以无法在外部访问。<br>这样，如果我们使用ModelAndView返回数据，页面使用诸如el表达式访问数据，<br>会出现无法访问的问题。</p>
+<p>解决办法：不使用静态内部类</p>
+<h1 id="实体类中的布尔值"><a href="#实体类中的布尔值" class="headerlink" title="实体类中的布尔值"></a>实体类中的布尔值</h1><p>布尔值一般会以is开头命名，如：<code>isShow</code>，表示是否显示。但是实体类生成的get、set方法会自动将is去掉。</p>
 
       
     </div>
@@ -698,7 +702,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">35</span>
+                      
+                    
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -736,7 +742,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单的DTO使用"><span class="nav-number">2.</span> <span class="nav-text">简单的DTO使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DTO深入使用"><span class="nav-number">3.</span> <span class="nav-text">DTO深入使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单的DTO使用"><span class="nav-number">2.</span> <span class="nav-text">简单的DTO使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DTO深入使用"><span class="nav-number">3.</span> <span class="nav-text">DTO深入使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">4.</span> <span class="nav-text">其他</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DTO内部类的问题"><span class="nav-number">5.</span> <span class="nav-text">DTO内部类的问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实体类中的布尔值"><span class="nav-number">6.</span> <span class="nav-text">实体类中的布尔值</span></a></li></ol></div>
             
 
           </div>
